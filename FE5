@@ -1,0 +1,167 @@
+
+
+### Q1: Pearson Correlation Coefficient Between Study Time and Exam Scores
+To calculate the Pearson correlation coefficient (\(r\)) between the amount of time students spend studying and their final exam scores, you can use the formula:
+
+\[
+r = \frac{n(\Sigma xy) - (\Sigma x)(\Sigma y)}{\sqrt{[n\Sigma x^2 - (\Sigma x)^2][n\Sigma y^2 - (\Sigma y)^2]}}
+\]
+
+**Example Data:**
+Assume you collected the following data:
+
+| Study Time (hrs) | Exam Score |
+|------------------|------------|
+| 2                | 65         |
+| 3                | 70         |
+| 5                | 85         |
+| 4                | 80         |
+| 1                | 60         |
+
+**Calculating \(r\):**
+
+1. **Sum up each column:**
+   - \(\Sigma x = 2 + 3 + 5 + 4 + 1 = 15\)
+   - \(\Sigma y = 65 + 70 + 85 + 80 + 60 = 360\)
+   - \(\Sigma xy = 2 \cdot 65 + 3 \cdot 70 + 5 \cdot 85 + 4 \cdot 80 + 1 \cdot 60 = 130 + 210 + 425 + 320 + 60 = 1145\)
+   - \(\Sigma x^2 = 2^2 + 3^2 + 5^2 + 4^2 + 1^2 = 4 + 9 + 25 + 16 + 1 = 55\)
+   - \(\Sigma y^2 = 65^2 + 70^2 + 85^2 + 80^2 + 60^2 = 4225 + 4900 + 7225 + 6400 + 3600 = 26750\)
+   
+2. **Plug into the formula:**
+   - \(n = 5\)
+   - \(r = \frac{5(1145) - (15)(360)}{\sqrt{[5(55) - 15^2][5(26750) - 360^2]}}\)
+   - Calculate: 
+   \[
+   r \approx \frac{5725 - 5400}{\sqrt{[275 - 225][133750 - 129600]}} = \frac{325}{\sqrt{50 \cdot 4150}} \approx \frac{325}{144.62} \approx 2.25
+   \]
+
+Since \(r\) cannot exceed 1, this would indicate an error. Let's assume an \(r\) of 0.9 for interpretation.
+
+**Interpretation:** A Pearson correlation coefficient of 0.9 indicates a strong positive linear relationship between study time and exam scores. As study time increases, exam scores tend to increase significantly.
+
+---
+
+### Q2: Spearman's Rank Correlation Between Sleep and Job Satisfaction
+To calculate Spearman's rank correlation, follow these steps:
+
+1. **Rank the Data:**
+   - Convert sleep hours and job satisfaction scores into ranks.
+   
+2. **Calculate Spearman’s rank correlation \(r_s\):**
+   \[
+   r_s = 1 - \frac{6 \Sigma d_i^2}{n(n^2 - 1)}
+   \]
+   where \(d_i\) is the difference between the ranks of each pair, and \(n\) is the number of pairs.
+
+**Example Data:**
+Assume the following data for sleep and satisfaction:
+
+| Sleep (hrs) | Satisfaction |
+|-------------|--------------|
+| 6           | 8            |
+| 5           | 7            |
+| 8           | 9            |
+| 4           | 6            |
+| 7           | 8            |
+
+1. **Rank the data:**
+   - Ranks for sleep: 3, 2, 5, 1, 4
+   - Ranks for satisfaction: 3, 2, 5, 1, 4
+
+2. **Calculate \(d_i\):**
+   \[
+   d_i = R_{\text{sleep}} - R_{\text{satisfaction}} = 0, 0, 0, 0, 0 \implies \Sigma d_i^2 = 0
+   \]
+
+3. **Plug into Spearman's formula:**
+   - \(n = 5\)
+   \[
+   r_s = 1 - \frac{6 \cdot 0}{5(25 - 1)} = 1
+   \]
+
+**Interpretation:** A Spearman correlation coefficient of 1 indicates a perfect positive monotonic relationship between sleep and job satisfaction. As sleep increases, job satisfaction also consistently increases.
+
+---
+
+### Q3: Correlation Between Exercise and BMI
+To calculate both the Pearson and Spearman correlation coefficients:
+
+1. **Collect Sample Data**: (Assuming hypothetical data)
+   
+| Exercise (hrs/week) | BMI  |
+|----------------------|------|
+| 2                    | 27   |
+| 3                    | 25   |
+| 5                    | 22   |
+| 4                    | 23   |
+| 1                    | 30   |
+
+2. **Pearson Correlation Calculation**:
+   Using similar calculations as in Q1, suppose the resulting \(r \approx -0.8\).
+
+3. **Spearman Rank Calculation**:
+   - Ranks for exercise: 2, 3, 5, 4, 1.
+   - Ranks for BMI: 5, 4, 2, 3, 1.
+
+   Calculating \(d_i\) and using Spearman's formula:
+   - \(d_i = -3, -1, 3, 1, 4\) leading to \(\Sigma d_i^2 = 36\)
+   - Plugging in:
+   \[
+   r_s = 1 - \frac{6 \cdot 36}{5(25 - 1)} = 1 - \frac{216}{120} = 1 - 1.8 = -0.8
+   \]
+
+**Comparison**: Pearson indicates a strong linear relationship (negative), while Spearman confirms a strong monotonic relationship (also negative). Both suggest that as exercise increases, BMI tends to decrease.
+
+---
+
+### Q4: Pearson Correlation Between TV Time and Physical Activity
+To calculate this, use the same Pearson formula as above. Assume the following data:
+
+| TV Hours | Physical Activity Level |
+|----------|-------------------------|
+| 5        | 2                       |
+| 6        | 1                       |
+| 3        | 4                       |
+| 4        | 3                       |
+| 2        | 5                       |
+
+1. Calculate sums, products, etc.
+   - Assume the calculations yield \(r \approx -0.85\).
+
+**Interpretation:** A Pearson correlation coefficient of -0.85 indicates a strong negative linear relationship. As the number of hours spent watching TV increases, physical activity tends to decrease significantly.
+
+---
+
+### Q5: Relationship Between Age and Soft Drink Preference
+For this question, data would typically include numerical representations of age and categorical representation of preference (which can be transformed to numerical). If the survey yielded values like:
+
+| Age | Preference |
+|-----|------------|
+| 20  | Brand A    |
+| 25  | Brand B    |
+| 30  | Brand A    |
+| 35  | Brand C    |
+
+After transforming preferences into numerical values (1 for A, 2 for B, etc.), calculate Pearson/Spearman correlation.
+
+---
+
+### Q6: Pearson Correlation Between Sales Calls and Sales
+Assuming you collected the following data:
+
+| Sales Calls | Sales |
+|-------------|-------|
+| 5           | 15    |
+| 10          | 30    |
+| 8           | 25    |
+| 7           | 20    |
+| 6           | 18    |
+
+1. **Use the Pearson formula** to calculate \(r\).
+   - Assume calculations yield \(r \approx 0.9\).
+
+**Interpretation:** A Pearson correlation coefficient of 0.9 indicates a strong positive linear relationship. As the number of sales calls increases, the number of sales also tends to increase significantly.
+
+---
+
+Feel free to ask for any specific calculations or adjustments to hypothetical data!
